@@ -1,0 +1,277 @@
+/* =====================
+   RESET & GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fff5fb;
+  color: #c24c8b;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* =====================
+   HEADINGS
+===================== */
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* =====================
+   NAVIGATION BAR
+===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 200, 220, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  transition: transform 0.8s ease-in-out;
+}
+
+.logo img:hover {
+  transform: rotate(360deg) scale(1.3);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #b8326a;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: #8fc04f;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 110px 8%;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  text-align: center;
+  background:
+    linear-gradient(
+      rgba(255, 211, 230, 0),
+      rgba(255, 254, 255, 0.85)
+    ),
+    url("Marga files/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ffffff;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  margin: 15px 0;
+  color: #a44a78;
+  font-weight: 600;
+}
+
+.personal-statement {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* =====================
+   IMAGES (PROJECTS)
+===================== */
+.stem5,
+.magazine {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 6px solid #ffffff;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   PORTFOLIO & CARDS
+===================== */
+.portfolio {
+  display: grid;
+  gap: 35px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(255, 200, 220, 0.45);
+}
+
+/* =====================
+   LEFT-ALIGNED CONTENT
+===================== */
+.left-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.download-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #ff8fc7;
+  color: #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #8fc04f;
+}
+
+/* =====================
+   REFLECTION BOX
+===================== */
+.reflection {
+  margin-top: 25px;
+  background: #fff0f8;
+  padding: 22px;
+  border-radius: 25px;
+}
+
+.reflection ul {
+  padding-left: 18px;
+}
+
+/* =====================
+   FLOATING FLOWERS
+===================== */
+.flowers span {
+  position: fixed;
+  font-size: 20px;
+  opacity: 0;
+  animation: floatFlower 10s linear infinite;
+}
+
+.flowers span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.flowers span:nth-child(2) { left: 25%; animation-delay: 4s; }
+.flowers span:nth-child(3) { left: 40%; animation-delay: 2s; }
+.flowers span:nth-child(4) { left: 55%; animation-delay: 8s; }
+.flowers span:nth-child(5) { left: 70%; animation-delay: 6s; }
+.flowers span:nth-child(6) { left: 85%; animation-delay: 3s; }
+
+@keyframes floatFlower {
+  0% {
+    top: 110%;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    top: -10%;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================
+   AWARDS & CONCLUSION
+===================== */
+.awards h3,
+.conclusion h3 {
+  color: #c2185b;
+  margin-bottom: 15px;
+}
+
+.awards ul {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #ff8fc7;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.85rem;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+  .section {
+    padding: 90px 6%;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.85rem;
+  }
+
+  .left-align {
+    align-items: center;
+    text-align: center;
+  }
+
+  .download-btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+}
